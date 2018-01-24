@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CSS/HTML Workshop with Convargo</title>
+	<title>CSS/HTML Workshop with Convargo</title>
+	<style>
+		#wrapper{
+			border-collapse: collapse;
+		}
+		#wrapper td, #wrapper th {
+			border: 1px solid #ddd;
+			padding: 5px;
+		}
+		#wrapper tr:nth-child(even){background-color: #f2f2f2;}
+		#title {background-color: #20B0F6;}
+	</style>
   </head>
   <body>
-    <div id="trucker">
-      <input class="name" type="text" placeholder="Trucker name"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-      <input class="price-by-cubic" type="number" placeholder="Price by m3"/>
-    </div>
-    <div id="shipper">
-      <input class="name" type="text" placeholder="Shipper name"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="volume" type="number" placeholder="Volume in m3"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script src="convargo.js"></script>
-    <script src="index.js"></script>
+	<div>
+	  <table id="wrapper">
+	  <tr>
+		<th id="title">Trucker</th>
+		<th id="title">Shipper</th> 
+	  </tr>
+	  <tr>
+		<td>Name: <input class="name" type="text" placeholder="Trucker name"/></td>
+		<td>Name: <input class="name" type="text" placeholder="Shipper name"/></td>
+	  </tr>
+	  <tr>
+		<td>Price by km: <input class="price-by-km" type="number" placeholder="Price by km"/></td>
+		<td>Distance(km): <input class="distance" type="number" placeholder="Distance in km"/></td>
+	  </tr>
+	  <tr>
+		<td>Price by m3: <input class="price-by-cubic" type="number" placeholder="Price by m3"/></td>
+		<td>Volume m3: <input class="volume" type="number" placeholder="Volume in m3"/></td>
+	  </tr>
+	  <tr>
+		<td></td>
+		<td>Deductible option: <input class="option" type="checkbox" placeholder="Deductible option"/></td>
+	  </tr>
+	  </table>
+ 
+	</div>
+
+	<button id="compute">Compute</button>
+	<div id="actors"></div>
+	<script src="convargo.js"></script>
+	<script src="index.js"></script>
   </body>
 </html>
